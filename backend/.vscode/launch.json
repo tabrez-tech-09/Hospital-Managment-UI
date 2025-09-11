@@ -1,0 +1,76 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EurekaServerApplication",
+            "request": "launch",
+            "mainClass": "com.hms.eureka.server.EurekaServerApplication",
+            "projectName": "Eureka-Server"
+        },
+        {
+            "type": "java",
+            "name": "AppointmentApplication",
+            "request": "launch",
+            "mainClass": "com.hms.appointment.AppointmentApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ProfileMsApplication",
+            "request": "launch",
+            "mainClass": "com.hms.Profile.ProfileMsApplication",
+            "projectName": "ProfileMS"
+        },
+        {
+            "type": "java",
+            "name": "GatewatHmsApplication",
+            "request": "launch",
+            "mainClass": "com.GatewatHMS.GatewatHmsApplication",
+            "projectName": "GatewatHMS"
+        },
+        {
+            "type": "java",
+            "name": "GatewatHmsApplication",
+            "request": "launch",
+            "mainClass": "com.GatewayHMS.GatewatHmsApplication",
+            "projectName": "GatewatHMS"
+        },
+        {
+            "type": "java",
+            "name": "GateWayMsApplication",
+            "request": "launch",
+            "mainClass": "com.hms.gateway.GateWayMsApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserMsApplication<userMS>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.hms.user.UserMsApplication",
+            "projectName": "userMS",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserMsApplication<UserMS>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.hms.user.UserMsApplication",
+            "projectName": "UserMS",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AppointmentApplication<Appointment>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.hms.appointment.AppointmentApplication",
+            "projectName": "Appointment",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
