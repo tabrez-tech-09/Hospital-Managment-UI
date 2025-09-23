@@ -51,11 +51,11 @@ const LoginPage: React.FC = () => {
       dispatch(setUser(userData));
 
       // ✅ Success message + navigation
-      successNotification("Login successful!");
+      successNotification("Success", "Login successful!");
       //navigate("/AdminDashBoard");
     } catch (error: any) {
       console.error(error.response?.data || error.message);
-      unsuccessNotification(error.response?.data?.message || "Login failed!");
+      unsuccessNotification("Error", error.response?.data?.message || "Login failed!");
     }
   };
 

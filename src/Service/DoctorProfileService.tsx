@@ -11,3 +11,7 @@ export const updateDoctorProfile = async (id: number, profileData: any) => {
   return response.data;
 };
 
+export const getDropDownDoctor = async () => {
+  const response = await axiosInstance.get(`/profile/doctors/dropdown`);
+  return response.data;
+};

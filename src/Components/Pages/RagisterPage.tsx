@@ -49,11 +49,12 @@ const RegisterPage: React.FC = () => {
       const data = await registerUser(userData);
       console.log("✅ Registered:", data);
 
-      successNotification(data.message || "Account created successfully");
+      successNotification("Success", data.message || "Account created successfully");
       navigate("/login");
     } catch (error: any) {
       console.error(error.response?.data || error.message);
       unsuccessNotification(
+        "Error",
         error.response?.data?.message || "Registration failed"
       );
     }

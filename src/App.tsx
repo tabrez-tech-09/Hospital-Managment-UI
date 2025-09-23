@@ -7,6 +7,8 @@ import "./App.css";
 import AppRoutes from "./Routes/AppRoutes";
 import { Provider } from "react-redux";
 import store from "./Store";
+import { PrimeReactProvider } from 'primereact/api';
+import { ModalsProvider } from "@mantine/modals";
 
 const theme = createTheme({
   focusRing: "never",
@@ -18,9 +20,13 @@ function App() {
   return (
     <Provider store={store}>
       <MantineProvider theme={theme}>
-        {/* ✅ notifications root पर होने चाहिए */}
-        <Notifications position="top-center" />
-        <AppRoutes />
+        <PrimeReactProvider>
+          <ModalsProvider>
+            {/* ✅ notifications should be at the top level, inside providers */}
+            <Notifications position="top-center" />
+            <AppRoutes />
+          </ModalsProvider>
+        </PrimeReactProvider>
       </MantineProvider>
     </Provider>
   );
