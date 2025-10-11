@@ -10,7 +10,7 @@ import { MultiSelect, MultiSelectChangeEvent } from "primereact/multiselect";
 import { Slider, SliderChangeEvent } from "primereact/slider";
 import { Tag } from "primereact/tag";
 import { Button, Modal, TextInput, Select, LoadingOverlay, ActionIcon,Text, SegmentedControl } from "@mantine/core";
-import { IconEdit, IconPlus, IconSearch, IconTrash } from "@tabler/icons-react";
+import { IconEdit, IconEye, IconPlus, IconSearch, IconTrash } from "@tabler/icons-react";
 import { DateTimePicker } from "@mantine/dates";
 import { useDisclosure } from "@mantine/hooks";
 import { getDropDownDoctor } from "../../../Service/DoctorProfileService";
@@ -19,6 +19,7 @@ import { successNotification, unsuccessNotification } from "../../../Util/Notifi
 import { cancelAppointment, getAppointmentByDoctor, scheduleAppointment } from "../../../Service/AppointmentService";
 import { modals } from "@mantine/modals";
 import { Toolbar } from "primereact/toolbar";
+import { useNavigate } from "react-router-dom";
 
 // ---------- Types ----------
 interface Country {
@@ -74,6 +75,7 @@ const Appointment: React.FC = () => {
   const [selectedCustomers, setSelectedCustomers] = useState<Customer[]>([]);
   const [appointments, setAppointments] = useState<any[]>([]);
   const [tab, setTab] = useState<string>('today');
+  const navigate= useNavigate();
 
   const [filters, setFilters] = useState<DataTableFilterMeta>({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -411,6 +413,7 @@ const filteredAppointment = appointments.filter((appointment) => {
   const actionBodyTemplate = (rowData: any) => {
     return (
       <div className="flex  gap-2">
+        <ActionIcon onClick={() => navigate(""+ rowData.id)}><IconEye color="red" size={20} stroke={1.5} /> </ActionIcon>
         <ActionIcon onClick={() => handleDelete(rowData)}><IconTrash color="red" size={20} stroke={1.5} /> </ActionIcon>
       </div>
     )

@@ -36,3 +36,8 @@ export const getAppointmentByDoctor = async (doctorId: string | number) => {
   return response.data;
 };
 
+export const createAppointmentReport = async (data: any) => {
+  const response = await axiosInstance.post("/appointments/records/create", data);
+  return response.data;
+}
+
