@@ -100,7 +100,7 @@ const Appointment: React.FC = () => {
       operator: FilterOperator.OR,
       constraints: [{ value: null, matchMode: FilterMatchMode.EQUALS }],
     },
-     notes: {
+    notes: {
       operator: FilterOperator.OR,
       constraints: [{ value: null, matchMode: FilterMatchMode.EQUALS }],
     },
@@ -513,7 +513,7 @@ const filteredAppointment = appointments.filter((appointment) => {
           filterPlaceholder="Search by name"
           style={{ minWidth: "14rem" }}
         />
-         <Column
+        <Column
           field="patientEmail"
           header="Email"
           body={timeTemplate}
